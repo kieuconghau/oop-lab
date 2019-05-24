@@ -1,3 +1,13 @@
+*.vscode
+*.vs
+*.sln
+Debug/
+x64/
+*.vcxproj
+*.filters
+*.user
+*.zip
+
 # Prerequisites
 *.d
 
