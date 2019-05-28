@@ -14,13 +14,7 @@ void cPoint2D::input()
 
 void cPoint2D::load(ifstream& stream)
 {
-	float temp;
-
-	stream >> temp;
-	this->setX(temp);
-	
-	stream >> temp;
-	this->setY(temp);
+	stream >> this->X >> this->Y;
 }
 
 float cPoint2D::getDistance(const cPoint2D& point) const

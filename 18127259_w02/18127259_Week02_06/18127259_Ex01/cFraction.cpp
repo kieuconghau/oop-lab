@@ -6,13 +6,7 @@ cFraction::~cFraction()
 
 void cFraction::load(ifstream& stream)
 {
-	int temp;
-
-	stream >> temp;
-	this->setNu(temp);
-
-	stream >> temp;
-	this->setDe(temp);
+	stream >> this->Nu >> this->De;
 }
 
 void cFraction::reduce()
