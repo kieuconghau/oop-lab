@@ -1,0 +1,29 @@
+#ifndef cstudent_h
+#define cstudent_h
+
+#include <iostream>
+#include <string>
+#include <fstream>
+#include "cName.h"
+#include "cDate.h"
+using namespace std;
+
+class cStudent
+{
+private:
+	int No;
+	string ID;
+	cName Name;
+	string Address;
+	cDate DoB;
+	float Mark;
+
+public:
+	void load_txt(ifstream&);
+	void save_xml(ofstream&);
+	void setNo(int);
+	int compare(const cStudent&);
+	void swap(cStudent&);
+};
+
+#endif

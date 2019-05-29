@@ -1,0 +1,6 @@
+5
+18127259;Kieu Cong Hau;235 Nguyen Van Cu, Ward 4, District 5, Ho Chi Minh City;18/12/2000;9.5
+18128001;Pham Khanh Linh;55 Hoang Bat Dat, Ward 15, Tan Binh District, TP.HCM;20/10/2000;9
+18129102;Tran Khoa;12 Pasteur, Ben Nghe Ward, District 1, Ho Chi Minh City;01/03/2000;9
+18129009;Pham Bang Bang;22L Vu Tan Huy, Ward 7, Binh Thanh District, Ho Chi Minh City;11/05/2000;9.5
+18127050;Tran Binh Khiem;872 Quang Trung, Ward 8, Go Vap District, Ho Chi Minh City;22/11/2000;8.9
