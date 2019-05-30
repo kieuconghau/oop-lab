@@ -1,5 +1,5 @@
-#ifndef ctriangle_h
-#define ctriangle_h
+#ifndef ctriangle_h_ex03
+#define ctriangle_h_ex03
 
 #include <iostream>
 #include <fstream>

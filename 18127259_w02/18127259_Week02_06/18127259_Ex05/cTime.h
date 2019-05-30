@@ -1,5 +1,5 @@
-#ifndef ctime_h
-#define ctime_h
+#ifndef ctime_h_ex05
+#define ctime_h_ex05
 
 #include <iostream>
 #include <string>

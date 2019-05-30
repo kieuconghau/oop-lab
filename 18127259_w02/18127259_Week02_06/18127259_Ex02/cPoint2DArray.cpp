@@ -30,11 +30,15 @@ bool cPoint2DArray::load(const string file_name)
 
 cPoint2D* cPoint2DArray::findTheFarthestPoint(const cPoint2D& P)
 {
-	cPoint2D* max = this->Arr;
+	cPoint2D max = this->Arr[0];
 	
+	int pos = 0;
 	for (int i = 1; i < this->N; i++)
-		if (this->Arr[i].getDistance(P) > max->getDistance(P))
-			max = Arr + i;
+		if (this->Arr[i].getDistance(P) > max.getDistance(P))
+		{
+			max = Arr[i];
+			pos = i;
+		}
 
-	return max;
+	return this->Arr + pos;
 }

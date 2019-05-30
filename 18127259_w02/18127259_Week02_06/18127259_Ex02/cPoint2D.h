@@ -1,5 +1,5 @@
-#ifndef point2d_h
-#define point2d_h
+#ifndef point2d_h_ex02
+#define point2d_h_ex02
 
 #include <iostream>
 #include <string>

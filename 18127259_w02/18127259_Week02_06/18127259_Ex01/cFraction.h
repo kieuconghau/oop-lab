@@ -1,5 +1,5 @@
-#ifndef cfraction_h
-#define cfraction_h
+#ifndef cfraction_h_ex01
+#define cfraction_h_ex01
 
 #include <iostream>
 #include <string>

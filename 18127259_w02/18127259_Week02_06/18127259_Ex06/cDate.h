@@ -1,5 +1,5 @@
-#ifndef cdate_h
-#define cdate_h
+#ifndef cdate_h_ex06
+#define cdate_h_ex06
 
 #include <iostream>
 #include <string>

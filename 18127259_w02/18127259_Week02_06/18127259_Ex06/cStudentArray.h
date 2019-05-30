@@ -1,5 +1,5 @@
-#ifndef cstudentarray_h
-#define cstudentarray_h
+#ifndef cstudentarray_h_ex06
+#define cstudentarray_h_ex06
 
 #include <iostream>
 #include <fstream>

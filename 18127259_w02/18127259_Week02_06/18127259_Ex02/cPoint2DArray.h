@@ -1,5 +1,5 @@
-#ifndef point2darray_h
-#define point2darray_h
+#ifndef point2darray_h_ex02
+#define point2darray_h_ex02
 
 #include <iostream>
 #include <fstream>

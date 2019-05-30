@@ -1,5 +1,5 @@
-#ifndef cname_h
-#define cname_h
+#ifndef cname_h_ex06
+#define cname_h_ex06
 
 #pragma warning(disable : 4996)
 

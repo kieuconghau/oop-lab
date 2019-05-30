@@ -33,7 +33,7 @@ void cFraction::standardize()
 	reduce();
 
 	if (this->Nu != 0)
-		this->Nu = fabs(this->Nu) * ((this->Nu*this->De) / fabs(this->Nu*this->De));
+		this->Nu = fabs(this->Nu) * ((this->Nu * this->De) / fabs(this->Nu*this->De));
 	
 	this->De = fabs(this->De);
 }

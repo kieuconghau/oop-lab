@@ -1,5 +1,5 @@
-#ifndef ctrianglearray_h
-#define ctrianglearray_h
+#ifndef ctrianglearray_h_ex03
+#define ctrianglearray_h_ex03
 
 #include <iostream>
 #include <fstream>

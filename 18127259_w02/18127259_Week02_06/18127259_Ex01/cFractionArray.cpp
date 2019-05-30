@@ -52,32 +52,42 @@ cFraction cFractionArray::getSum()
 
 cFraction* cFractionArray::getMax()
 {
-	cFraction* max = this->Arr;
+	cFraction max = this->Arr[0];
+	int pos = 0;
 
 	for (int i = 1; i < this->N; i++)
-		if (this->Arr[i].getComparison(*max) == cComparison::GREATER)
-			max = this->Arr + i;
+		if (this->Arr[i].getComparison(max) == cComparison::GREATER)
+		{
+			max = this->Arr[i];
+			pos = i;
+		}
 
-	return max;
+	return Arr + pos;
 }
 
 cFraction* cFractionArray::getMin()
 {
-	cFraction* min = this->Arr;
+	cFraction min = this->Arr[0];
+	int pos = 0;
 
 	for (int i = 1; i < this->N; i++)
-		if (this->Arr[i].getComparison(*min) == cComparison::LESS)
-			min = this->Arr + i;
+		if (this->Arr[i].getComparison(min) == cComparison::LESS)
+		{
+			min = this->Arr[i];
+			pos = i;
+		}
 
-	return min;
+	return this->Arr + pos;
 }
 
 void cFractionArray::sortAscending()
 {
+	cFraction* max = new cFraction;
+
 	int i = this->N - 1;
 	while (i != 0)
 	{
-		cFraction* max = this->Arr;
+		max = this->Arr;
 		for (int j = 1; j <= i; j++)
 		{
 			if (this->Arr[j].getComparison(*max) == cComparison::GREATER)

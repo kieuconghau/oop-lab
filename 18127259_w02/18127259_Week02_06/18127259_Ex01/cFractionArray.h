@@ -1,5 +1,5 @@
-#ifndef cfractionarray_h
-#define cfractionarray_h
+#ifndef cfractionarray_h_ex1
+#define cfractionarray_h_ex01
 
 #include <iostream>
 #include <fstream>

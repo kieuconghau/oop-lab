@@ -1,5 +1,5 @@
-#ifndef cstudent_h
-#define cstudent_h
+#ifndef cstudent_h_ex06
+#define cstudent_h_ex06
 
 #include <iostream>
 #include <string>
