@@ -12,6 +12,9 @@ cFractionArray::cFractionArray(const cFractionArray& fracArr)
 	if (this->N != 0)
 	{
 		this->Arr = new cFraction[this->N];
+		if (this->Arr == nullptr)
+			throw;
+
 		for (int i = 0; i < this->N; i++)
 			this->Arr[i] = fracArr.Arr[i];
 	}
@@ -23,7 +26,11 @@ cFractionArray::cFractionArray(cFraction* arr, int length)
 {
 	if (length > 0 && arr != nullptr)
 	{
+		this->N = length;
 		this->Arr = new cFraction[length];
+		if (this->Arr == nullptr)
+			throw;
+
 		for (int i = 0; i < this->N; i++)
 			this->Arr[i] = arr[i];
 	}
@@ -52,6 +59,8 @@ bool cFractionArray::load(const string file_name)
 		return false;
 
 	this->Arr = new cFraction[this->N];
+	if (this->Arr == nullptr)
+		return false;
 
 	for (int i = 0; i < this->N; i++)
 		this->Arr[i].load(f);
@@ -87,37 +96,29 @@ cFraction cFractionArray::getSum()
 
 cFraction* cFractionArray::getMax()
 {
-	cFraction max = this->Arr[0];
-	int pos = 0;
+	cFraction* max = this->Arr;
 
 	for (int i = 1; i < this->N; i++)
-		if (this->Arr[i].getComparison(max) == cComparison::GREATER)
-		{
-			max = this->Arr[i];
-			pos = i;
-		}
+		if (this->Arr[i].getComparison(*max) == cComparison::GREATER)
+			max = this->Arr + i;
 
-	return Arr + pos;
+	return max;
 }
 
 cFraction* cFractionArray::getMin()
 {
-	cFraction min = this->Arr[0];
-	int pos = 0;
+	cFraction* min = this->Arr;
 
 	for (int i = 1; i < this->N; i++)
-		if (this->Arr[i].getComparison(min) == cComparison::LESS)
-		{
-			min = this->Arr[i];
-			pos = i;
-		}
+		if (this->Arr[i].getComparison(*min) == cComparison::LESS)
+			min = this->Arr + i;
 
-	return this->Arr + pos;
+	return min;
 }
 
 void cFractionArray::sortAscending()
 {
-	cFraction* max = new cFraction;
+	cFraction* max;
 
 	int i = this->N - 1;
 	while (i != 0)
