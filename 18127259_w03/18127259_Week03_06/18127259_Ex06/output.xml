@@ -1,0 +1,57 @@
+<List>
+<Student1>
+<ID>18127259</ID>
+<Name>
+<FullName>Kieu Cong Hau</FullName>
+<FirstName>Hau</FirstName>
+<LastName>Kieu</LastName>
+</Name>
+<Address>235 Nguyen Van Cu, Ward 4, District 5, Ho Chi Minh City</Address>
+<DoB>18/12/2000</DoB>
+<Mark>9.5</Mark>
+</Student1>
+<Student4>
+<ID>18129009</ID>
+<Name>
+<FullName>Pham Bang Bang</FullName>
+<FirstName>Bang</FirstName>
+<LastName>Pham</LastName>
+</Name>
+<Address>22L Vu Tan Huy, Ward 7, Binh Thanh District, Ho Chi Minh City</Address>
+<DoB>11/05/2000</DoB>
+<Mark>9.5</Mark>
+</Student4>
+<Student2>
+<ID>18128001</ID>
+<Name>
+<FullName>Pham Khanh Linh</FullName>
+<FirstName>Linh</FirstName>
+<LastName>Pham</LastName>
+</Name>
+<Address>55 Hoang Bat Dat, Ward 15, Tan Binh District, TP.HCM</Address>
+<DoB>20/10/2000</DoB>
+<Mark>9</Mark>
+</Student2>
+<Student5>
+<ID>18127050</ID>
+<Name>
+<FullName>Tran Binh Khiem</FullName>
+<FirstName>Khiem</FirstName>
+<LastName>Tran</LastName>
+</Name>
+<Address>872 Quang Trung, Ward 8, Go Vap District, Ho Chi Minh City</Address>
+<DoB>22/11/2000</DoB>
+<Mark>8.9</Mark>
+</Student5>
+<Student3>
+<ID>18129102</ID>
+<Name>
+<FullName>Tran Khoa</FullName>
+<FirstName>Khoa</FirstName>
+<LastName>Tran</LastName>
+</Name>
+<Address>12 Pasteur, Ben Nghe Ward, District 1, Ho Chi Minh City</Address>
+<DoB>01/03/2000</DoB>
+<Mark>9</Mark>
+</Student3>
+</List>
