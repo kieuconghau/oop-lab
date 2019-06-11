@@ -12,7 +12,10 @@ IntArray::IntArray(int length)
 		throw;
 
 	else if (length == 0)
-		IntArray();
+	{
+		this->Arr = nullptr;
+		this->N = 0;
+	}
 
 	else
 	{
@@ -28,7 +31,10 @@ IntArray::IntArray(int length)
 IntArray::IntArray(int* array, int length)
 {
 	if (array == nullptr && length == 0)
-		IntArray();
+	{
+		this->Arr = nullptr;
+		this->N = 0;
+	}
 
 	else if (array != nullptr && length > 0)
 	{
@@ -77,7 +83,8 @@ IntArray& IntArray::operator=(const IntArray& ia)
 
 	if (ia.Arr == nullptr && ia.N == 0)
 	{
-		IntArray();
+		this->Arr = nullptr;
+		this->N = 0;
 		return *this;
 	}
 
@@ -97,6 +104,9 @@ IntArray& IntArray::operator=(const IntArray& ia)
 
 int& IntArray::operator[](int index)
 {
+	if (index < 0 || index >= this->N)
+		throw;
+
 	return this->Arr[index];
 }
 
