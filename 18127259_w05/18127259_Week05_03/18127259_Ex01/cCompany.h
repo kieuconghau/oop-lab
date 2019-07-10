@@ -14,3 +14,4 @@ private:
 	cProductionEmployee* PEs;
 	cDailyWorker* DWs;
 };
+
