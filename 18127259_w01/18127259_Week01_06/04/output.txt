@@ -1,0 +1,6 @@
+0 0
+0 1
+1 1
+Isosceles and Right
+3.41421
+0.5
