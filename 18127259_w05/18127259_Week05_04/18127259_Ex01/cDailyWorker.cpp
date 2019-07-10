@@ -1,20 +1,35 @@
 #include "cDailyWorker.h"
 
-const float cDailyWorker::SALARY_UNIT = 20000.f;
+const float cDailyWorker::SALARY_UNIT = 300000;
 
-cDailyWorker::cDailyWorker() {}
+cDailyWorker::cDailyWorker()
+{
+	this->DayQuantity = 0;
+}
 
 cDailyWorker::cDailyWorker(const cDailyWorker& productionEmployee)
-	: cEmployee(productionEmployee) {}
+	: cEmployee(productionEmployee)
+{
+	this->DayQuantity = 0;
+}
 
 cDailyWorker::cDailyWorker(string id, string fullName, string address, int day, int month, int year)
-	: cEmployee(id, fullName, address, day, month, year) {}
+	: cEmployee(id, fullName, address, day, month, year)
+{
+	this->DayQuantity = 0;
+}
 
 cDailyWorker::cDailyWorker(string id, string fullName, string address)
-	: cEmployee(id, fullName, address) {}
+	: cEmployee(id, fullName, address)
+{
+	this->DayQuantity = 0;
+}
 
 cDailyWorker::cDailyWorker(string id, string fullName)
-	: cEmployee(id, fullName) {}
+	: cEmployee(id, fullName)
+{
+	this->DayQuantity = 0;
+}
 
 void cDailyWorker::input_info()
 {

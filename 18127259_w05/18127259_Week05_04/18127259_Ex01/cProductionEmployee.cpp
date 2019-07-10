@@ -2,19 +2,34 @@
 
 const float cProductionEmployee::SALARY_UNIT = 20000.f;
 
-cProductionEmployee::cProductionEmployee() {}
+cProductionEmployee::cProductionEmployee()
+{
+	this->ProductQuantity = 0;
+}
 
 cProductionEmployee::cProductionEmployee(const cProductionEmployee& productionEmployee)
-	: cEmployee(productionEmployee) {}
+	: cEmployee(productionEmployee)
+{
+	this->ProductQuantity = 0;
+}
 
 cProductionEmployee::cProductionEmployee(string id, string fullName, string address, int day, int month, int year)
-	: cEmployee(id, fullName, address, day, month, year) {}
+	: cEmployee(id, fullName, address, day, month, year)
+{
+	this->ProductQuantity = 0;
+}
 
 cProductionEmployee::cProductionEmployee(string id, string fullName, string address)
-	: cEmployee(id, fullName, address) {}
+	: cEmployee(id, fullName, address)
+{
+	this->ProductQuantity = 0;
+}
 
 cProductionEmployee::cProductionEmployee(string id, string fullName)
-	: cEmployee(id, fullName) {}
+	: cEmployee(id, fullName)
+{
+	this->ProductQuantity = 0;
+}
 
 void cProductionEmployee::input_info()
 {
