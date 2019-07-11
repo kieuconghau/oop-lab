@@ -15,7 +15,7 @@ public:
 	void show_info();
 
 	void input_product_quantity();
-	void calc_salary();
+	float calc_salary();
 
 private:
 	static const float SALARY_UNIT;
