@@ -50,3 +50,9 @@ Base destructor
 Base destructor
 Base destructor
 */
+
+int main()
+{
+
+	return 0;
+}
