@@ -2,7 +2,7 @@
 
 const float cFormTeacher::FRINGE_BENEFITS = 500000;
 
-cFormTeacher::cFormTeacher()
+cFormTeacher::cFormTeacher() : cTeacher(cTeacher::ecType::FORM_TEACHER)
 {
 	this->ClassName = "N/A";
 }
@@ -13,19 +13,19 @@ cFormTeacher::cFormTeacher(const cFormTeacher& formTeacher) : cTeacher(formTeach
 }
 
 cFormTeacher::cFormTeacher(string className, string id, string fullName, float payRate, float basicPay)
-	: cTeacher(id, fullName, payRate, basicPay)
+	: cTeacher(id, fullName, payRate, basicPay, cTeacher::ecType::FORM_TEACHER)
 {
 	this->ClassName = className;
 }
 
 cFormTeacher::cFormTeacher(string className, string id, float payRate, float basicPay)
-	: cTeacher(id, payRate, basicPay)
+	: cTeacher(id, payRate, basicPay, cTeacher::ecType::FORM_TEACHER)
 {
 	this->ClassName = className;
 }
 
 cFormTeacher::cFormTeacher(string className, float payRate, float basicPay)
-	: cTeacher(payRate, basicPay)
+	: cTeacher(payRate, basicPay, cTeacher::ecType::FORM_TEACHER)
 {
 	this->ClassName = className;
 }

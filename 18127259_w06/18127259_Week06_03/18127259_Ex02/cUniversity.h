@@ -19,11 +19,10 @@ public:
 	int count_form_teacher();
 	float calc_average_salary();
 	vector<cTeacher*> find_all_teachers_having_salary_more_than(float salary = 10000000);
-	cTeacher* find_a_teacher_with_id(string id);
-	vector<cTeacher*> find_all_teachers_with_name(string fullName);
+	cTeacher* find_a_teacher_with_id();
+	vector<cTeacher*> find_all_teachers_with_name();
 	int count_teachers_having_dayoffs_more_than(int dayQuantity = 4);
 
 private:
 	vector<cTeacher*> Teachers;
-	int NTCount, FTCount;
 };

@@ -1,10 +1,6 @@
 #include "cUniversity.h"
 
-cUniversity::cUniversity()
-{
-	this->FTCount = 0;
-	this->NTCount = 0;
-}
+cUniversity::cUniversity() {}
 
 cUniversity::~cUniversity()
 {
@@ -29,12 +25,10 @@ void cUniversity::input()
 		if (opt == "1")
 		{
 			teacher = new cTeacher;
-			++this->NTCount;
 		}
 		else if (opt == "2")
 		{
 			teacher = new cFormTeacher;
-			++this->FTCount;
 		}
 		else
 			throw;
@@ -95,16 +89,34 @@ vector<cTeacher*> cUniversity::find_all_teachers_having_the_highest_salary()
 
 int cUniversity::count_normal_teacher()
 {
-	return this->NTCount;
+	int n = this->Teachers.size();
+
+	int count = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (this->Teachers[i]->has_type(cTeacher::ecType::NORMAL_TEACHER))
+			++count;
+	}
+
+	return count;
 }
 
 int cUniversity::count_form_teacher()
 {
-	return this->FTCount;
+	int n = this->Teachers.size();
+
+	int count = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (this->Teachers[i]->has_type(cTeacher::ecType::FORM_TEACHER))
+			++count;
+	}
+
+	return count;
 }
 
 float cUniversity::calc_average_salary()
-{
+{	
 	return this->calc_sum_salary() / this->Teachers.size();
 }
 
@@ -122,7 +134,7 @@ vector<cTeacher*> cUniversity::find_all_teachers_having_salary_more_than(float s
 	return res;
 }
 
-cTeacher* cUniversity::find_a_teacher_with_id(string id)
+cTeacher* cUniversity::find_a_teacher_with_id()
 {
 	string id;
 	cout << "Input ID:";
@@ -139,7 +151,7 @@ cTeacher* cUniversity::find_a_teacher_with_id(string id)
 	return nullptr;
 }
 
-vector<cTeacher*> cUniversity::find_all_teachers_with_name(string fullName)
+vector<cTeacher*> cUniversity::find_all_teachers_with_name()
 {
 	string fullName;
 	cout << "Input full name: ";
