@@ -1,10 +1,11 @@
 #include "cEmployee.h"
 
-cEmployee::cEmployee()
+cEmployee::cEmployee(cEmployee::ecType type)
 {
 	this->ID = "N/A";
 	this->FullName = "N/A";
 	this->Address = "N/A";
+	this->Type = type;
 }
 
 cEmployee::cEmployee(const cEmployee& employee)
@@ -12,25 +13,28 @@ cEmployee::cEmployee(const cEmployee& employee)
 	*this = employee;
 }
 
-cEmployee::cEmployee(string id, string fullName, string address, int day, int month, int year) : DoB(day, month, year)
+cEmployee::cEmployee(string id, string fullName, string address, int day, int month, int year, cEmployee::ecType type) : DoB(day, month, year)
 {
 	this->ID = id;
 	this->FullName = fullName;
 	this->Address = address;
+	this->Type = type;
 }
 
-cEmployee::cEmployee(string id, string fullName, string address)
+cEmployee::cEmployee(string id, string fullName, string address, cEmployee::ecType type)
 {
 	this->ID = id;
 	this->FullName = fullName;
 	this->Address = address;
+	this->Type = type;
 }
 
-cEmployee::cEmployee(string id, string fullName)
+cEmployee::cEmployee(string id, string fullName, cEmployee::ecType type)
 {
 	this->ID = id;
 	this->FullName = fullName;
 	this->Address = "N/A";
+	this->Type = type;
 }
 
 cEmployee::~cEmployee() {}
@@ -70,4 +74,9 @@ bool cEmployee::has_full_name(string fullName)
 bool cEmployee::has_birthday_in_month(int month)
 {
 	return this->DoB.is_in_month(month);
+}
+
+bool cEmployee::has_type(cEmployee::ecType type)
+{
+	return this->Type == type;
 }

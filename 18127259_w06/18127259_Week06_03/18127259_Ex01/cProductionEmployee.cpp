@@ -2,7 +2,7 @@
 
 const float cProductionEmployee::SALARY_UNIT = 20000.f;
 
-cProductionEmployee::cProductionEmployee()
+cProductionEmployee::cProductionEmployee() : cEmployee(cEmployee::ecType::PRODUCTION_EMPLOYEE)
 {
 	this->ProductQuantity = 0;
 }
@@ -14,19 +14,19 @@ cProductionEmployee::cProductionEmployee(const cProductionEmployee& productionEm
 }
 
 cProductionEmployee::cProductionEmployee(string id, string fullName, string address, int day, int month, int year)
-	: cEmployee(id, fullName, address, day, month, year)
+	: cEmployee(id, fullName, address, day, month, year, cEmployee::ecType::PRODUCTION_EMPLOYEE)
 {
 	this->ProductQuantity = 0;
 }
 
 cProductionEmployee::cProductionEmployee(string id, string fullName, string address)
-	: cEmployee(id, fullName, address)
+	: cEmployee(id, fullName, address, cEmployee::ecType::PRODUCTION_EMPLOYEE)
 {
 	this->ProductQuantity = 0;
 }
 
 cProductionEmployee::cProductionEmployee(string id, string fullName)
-	: cEmployee(id, fullName)
+	: cEmployee(id, fullName, cEmployee::ecType::PRODUCTION_EMPLOYEE)
 {
 	this->ProductQuantity = 0;
 }
@@ -43,7 +43,7 @@ void cProductionEmployee::show_info()
 	cEmployee::show_info();
 }
 
-void cProductionEmployee::input_product_quantity()
+void cProductionEmployee::input_day_quantity()
 {
 	cout << "Input product quantity of this employee: ";
 	cin >> this->ProductQuantity;

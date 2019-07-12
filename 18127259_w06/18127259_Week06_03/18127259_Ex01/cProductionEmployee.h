@@ -14,7 +14,7 @@ public:
 	void input_info();
 	void show_info();
 
-	void input_product_quantity();
+	void input_day_quantity();
 	float calc_salary();
 
 private:

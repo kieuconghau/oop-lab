@@ -1,14 +1,12 @@
 #include "cCompany.h"
 
-cCompany::cCompany()
-{
-	this->DWCount = 0;
-	this->PECount = 0;
-}
+cCompany::cCompany() {}
 
 cCompany::~cCompany()
 {
-	for (int i = 0; i < this->Employees.size(); i++)
+	int n = this->Employees.size();
+
+	for (int i = 0; i < n; i++)
 		delete this->Employees[i];
 }
 
@@ -27,12 +25,10 @@ void cCompany::input()
 		if (opt == "1")
 		{
 			employee = new cProductionEmployee;
-			++this->PECount;
 		}
 		else if (opt == "2")
 		{
 			employee = new cDailyWorker;
-			++this->DWCount;
 		}
 		else
 			throw;
@@ -93,12 +89,30 @@ vector<cEmployee*> cCompany::find_employees_having_the_highest_salary()
 
 int cCompany::count_production_employees()
 {
-	return this->PECount;
+	int n = this->Employees.size();
+
+	int count = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (this->Employees[i]->has_type(cEmployee::ecType::PRODUCTION_EMPLOYEE))
+			++count;
+	}
+
+	return count;
 }
 
 int cCompany::count_daily_workers()
 {
-	return this->DWCount;
+	int n = this->Employees.size();
+
+	int count = 0;
+	for (int i = 0; i < n; i++)
+	{
+		if (this->Employees[i]->has_type(cEmployee::ecType::DAILY_WORKER))
+			++count;
+	}
+
+	return count;
 }
 
 float cCompany::calc_average_salary()

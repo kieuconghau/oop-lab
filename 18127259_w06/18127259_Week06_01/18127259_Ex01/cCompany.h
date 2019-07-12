@@ -26,5 +26,4 @@ public:
 
 private:
 	vector<cEmployee*> Employees;
-	int PECount, DWCount;
 };
