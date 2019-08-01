@@ -1,15 +1,18 @@
 #pragma once
+#include "CItem.h"
 
-#include "cItem.h"
-
-class cFile : public cItem
+class CFile : public CItem
 {
 public:
-	cFile();
-	cFile(string name, long size);
+	CFile(string const name, unsigned const size);
+	void print(bool const show_hidden) const override;
+	unsigned getSize() const override;
+	CItem* removeByName(string const name) override;
+	CItem* findByName(string const name) const override;
+	void setHidden(bool const hidden, bool const all) override;
 
 private:
-	long ReadOnlyByte;
-	long HiddenByte;
+	unsigned Size;
 };
+
 

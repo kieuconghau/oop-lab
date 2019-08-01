@@ -1,25 +1,24 @@
 #pragma once
-
 #include <iostream>
 #include <string>
 #include <vector>
 using namespace std;
 
-class cItem
+class CItem
 {
 public:
-	cItem();
-	cItem(string name);
-	cItem(string name, long size);
+	CItem(string const name);
+	virtual ~CItem();
+	virtual void print(bool const show_hidden) const;
+	virtual unsigned getSize() const = 0;
+	virtual CItem* removeByName(string const name) = 0;
+	virtual CItem* findByName(string const name) const = 0;
+	virtual void setHidden(bool const hidden, bool const all);
 
-	virtual void setHidden(bool, bool);
-	virtual void print(bool type);
-
-private:
+	bool hasName(string const name) const;
 
 protected:
 	string Name;
-	long Size;
 	bool Hidden;
+	bool ReadOnly;
 };
-

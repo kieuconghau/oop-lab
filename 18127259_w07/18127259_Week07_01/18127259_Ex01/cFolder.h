@@ -1,21 +1,20 @@
 #pragma once
+#include "CFile.h"
 
-#include "cItem.h"
-
-class cFolder : public cItem
+class CFolder : public CItem
 {
 public:
-	cFolder();
-	cFolder(string name);
-	~cFolder();
+	CFolder(string const name);
+	//~CFolder();
 
-	void add(cItem* item);
-	void print(bool type);	// Sub-files: 1, Folders: 0
-	cItem* removeByName(string itemName);
-	cItem* findByName(string itemName);
-	void setHidden(bool, bool);
+	void add(CItem* const item);
+
+	CItem* removeByName(string const name) override;
+	CItem* findByName(string const name) const override;
+	void print(bool const show_hidden) const override;
+	unsigned getSize() const override;
+	void setHidden(bool const hidden, bool const all) override;
 
 private:
-	vector<cItem*> Items;
+	vector<CItem*> Items;
 };
-
